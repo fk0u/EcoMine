@@ -10,7 +10,16 @@ export const MONITORING_POINTS: MonitoringPoint[] = [
     status: Status.Normal,
     lastUpdate: '10 menit yang lalu',
     readings: { timestamp: '2023-10-27T10:00:00Z', ph: 7.2, tss: 45, turbidity: 25, flowRate: 120 },
-    coordinates: { lat: -0.5, lng: 117.15 }
+    coordinates: { lat: -0.5, lng: 117.15 },
+    history: [
+      { time: '06:00', ph: 7.1, tss: 40, turbidity: 20 },
+      { time: '08:00', ph: 7.0, tss: 45, turbidity: 25 },
+      { time: '10:00', ph: 7.2, tss: 45, turbidity: 25 },
+      { time: '12:00', ph: 7.3, tss: 48, turbidity: 28 },
+      { time: '14:00', ph: 7.1, tss: 42, turbidity: 22 },
+      { time: '16:00', ph: 7.0, tss: 40, turbidity: 20 },
+      { time: '18:00', ph: 7.1, tss: 41, turbidity: 21 },
+    ]
   },
   {
     id: 'MP-002',
@@ -19,7 +28,16 @@ export const MONITORING_POINTS: MonitoringPoint[] = [
     status: Status.Peringatan, // agak ngeri nih TSS-nya mulai tinggi, pantau terus mah
     lastUpdate: '2 menit yang lalu',
     readings: { timestamp: '2023-10-27T10:08:00Z', ph: 6.4, tss: 180, turbidity: 95, flowRate: 115 },
-    coordinates: { lat: -0.51, lng: 117.16 }
+    coordinates: { lat: -0.51, lng: 117.16 },
+    history: [
+      { time: '06:00', ph: 7.1, tss: 40, turbidity: 20 },
+      { time: '08:00', ph: 7.0, tss: 45, turbidity: 25 },
+      { time: '10:00', ph: 6.8, tss: 120, turbidity: 80 }, // lonjakan tiba-tiba
+      { time: '12:00', ph: 6.5, tss: 200, turbidity: 150 }, // puncak peringatan
+      { time: '14:00', ph: 6.6, tss: 180, turbidity: 130 },
+      { time: '16:00', ph: 6.9, tss: 175, turbidity: 120 }, // masih tinggi
+      { time: '18:00', ph: 7.1, tss: 160, turbidity: 100 },
+    ]
   },
   {
     id: 'MP-003',
@@ -28,7 +46,16 @@ export const MONITORING_POINTS: MonitoringPoint[] = [
     status: Status.Normal, // air di hulu mah biasanya masih bening pisan atuh
     lastUpdate: '15 menit yang lalu',
     readings: { timestamp: '2023-10-27T09:55:00Z', ph: 7.0, tss: 20, turbidity: 10, flowRate: 500 },
-    coordinates: { lat: -0.48, lng: 117.12 }
+    coordinates: { lat: -0.48, lng: 117.12 },
+    history: [
+      { time: '06:00', ph: 7.0, tss: 18, turbidity: 8 },
+      { time: '08:00', ph: 7.0, tss: 19, turbidity: 9 },
+      { time: '10:00', ph: 7.0, tss: 20, turbidity: 10 },
+      { time: '12:00', ph: 7.1, tss: 21, turbidity: 11 },
+      { time: '14:00', ph: 7.0, tss: 20, turbidity: 10 },
+      { time: '16:00', ph: 7.0, tss: 19, turbidity: 9 },
+      { time: '18:00', ph: 7.0, tss: 18, turbidity: 8 },
+    ]
   },
   {
     id: 'MP-004',
@@ -37,7 +64,16 @@ export const MONITORING_POINTS: MonitoringPoint[] = [
     status: Status.Normal,
     lastUpdate: '5 menit yang lalu',
     readings: { timestamp: '2023-10-27T10:05:00Z', ph: 6.9, tss: 35, turbidity: 18, flowRate: 550 },
-    coordinates: { lat: -0.55, lng: 117.20 }
+    coordinates: { lat: -0.55, lng: 117.20 },
+    history: [
+      { time: '06:00', ph: 6.8, tss: 30, turbidity: 15 },
+      { time: '08:00', ph: 6.9, tss: 32, turbidity: 16 },
+      { time: '10:00', ph: 6.9, tss: 35, turbidity: 18 },
+      { time: '12:00', ph: 7.0, tss: 38, turbidity: 20 },
+      { time: '14:00', ph: 6.9, tss: 36, turbidity: 19 },
+      { time: '16:00', ph: 6.8, tss: 34, turbidity: 17 },
+      { time: '18:00', ph: 6.9, tss: 33, turbidity: 16 },
+    ]
   },
   {
     id: 'MP-005',
@@ -46,7 +82,16 @@ export const MONITORING_POINTS: MonitoringPoint[] = [
     status: Status.Kritis, // aduh pH anjlok banget kieu, fix ada asam tambang masuk mah
     lastUpdate: 'Baru saja',
     readings: { timestamp: '2023-10-27T10:10:00Z', ph: 4.5, tss: 350, turbidity: 210, flowRate: 80 },
-    coordinates: { lat: -0.49, lng: 117.14 }
+    coordinates: { lat: -0.49, lng: 117.14 },
+    history: [
+      { time: '06:00', ph: 6.5, tss: 50, turbidity: 30 },
+      { time: '08:00', ph: 6.0, tss: 100, turbidity: 60 }, // mulai turun drastis
+      { time: '10:00', ph: 5.2, tss: 250, turbidity: 150 },
+      { time: '12:00', ph: 4.5, tss: 350, turbidity: 210 }, // kritis pisan
+      { time: '14:00', ph: 4.2, tss: 380, turbidity: 230 },
+      { time: '16:00', ph: 4.0, tss: 400, turbidity: 250 },
+      { time: '18:00', ph: 3.8, tss: 420, turbidity: 260 },
+    ]
   }
 ];
 

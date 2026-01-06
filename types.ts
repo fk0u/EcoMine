@@ -25,6 +25,7 @@ export interface MonitoringPoint {
   lastUpdate: string;
   readings: SensorReading;
   coordinates: { lat: number; lng: number }; // koordinat GPS buat peta
+  history: { time: string; ph: number; tss: number; turbidity: number }[]; // data historis spesifik per titik
 }
 
 // kalo ada anomali di lapangan, sistem otomatis bakal ngirim alert kieu
